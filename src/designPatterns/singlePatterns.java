@@ -9,7 +9,7 @@ public class singlePatterns {
 		   
 		       synchronized (singlePatterns.class) {
 			    	   if (singlePatterns==null) {
-			    	   return new singlePatterns();
+			    	   return new singlePatterns();	
 			       }
 			  
 		        }
