@@ -15,8 +15,10 @@ public class test39 {
         for (int i:array){
             if (isBit1(i,index)){
                 num1[0]^=i;
+            }else{
+                num2[0]^=i;
             }
-            num2[0]^=i;
+
         }
 
     }
@@ -30,15 +32,15 @@ public class test39 {
     }
     private  boolean isBit1(int num,int index){
         num >>>=index;
-        if ((num&1)==0){
+        if ((num&1)==1){
           return true;
         }
         return false;
     }
     public static void main(String[] args) {
         int[] data1 = {2,4,3,6,3,2,5,5};
-        int[] data2=null;
-        int[] data3=null;
+        int[] data2=new int[1];
+        int[] data3=new int[1];
         new test39().FindNumsAppearOnce(data1,data2,data3);
 System.out.print(data2[0]);
         System.out.print(data3[0]);

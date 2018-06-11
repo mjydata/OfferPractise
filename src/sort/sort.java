@@ -2,7 +2,7 @@ package sort;
 
 public class sort {
 	public static void main(String[] args){
-        int[] arr={6,1,10,23,43,5,4,55,656,7,545343,23,32,4354};
+        int[] arr={4,5,1,6,2,7,3,8};
         quickSort(arr,0,arr.length-1);
         for(int i=0;i<arr.length;i++){
             System.out.print(arr[i]+" ");
@@ -68,8 +68,11 @@ public class sort {
 	public static void quickSort(int[] arr,int low ,int high){
 		if (low <high ){
 			int middle = getMiddle(arr,low,high);
-			quickSort(arr,0,middle-1);
-			quickSort(arr,middle+1,high);
+			if(middle-1>4){
+				quickSort(arr,0,middle-1);
+				quickSort(arr,middle+1,high);
+			}
+
 		}
 		
 	}
@@ -88,6 +91,27 @@ public class sort {
 			arr[high]=arr[low];
 		}
 		arr[low]=key;
-		return low;
+
+			return low;
+
+
+	}
+	//二分查找（有序数组）O(logn)
+	public static int GetNumberOfK(int [] array , int k) {
+		return  find(array,k,0,array.length-1);
+	}
+	public static int find(int[] array,int k,int low,int high){
+
+		while(low<=high){
+			int middle=(low+high)>>>1;
+			if(k<array[middle]){
+				high=middle-1;
+			}else if (k>array[middle]){
+				low=middle+1;
+			}else {
+				return middle;
+			}
+		}
+		return -1;
 	}
 }

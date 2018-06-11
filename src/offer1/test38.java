@@ -6,7 +6,7 @@ package offer1;
  */
 public class test38 {
 
-    public boolean IsBalanced_Solution(TreeNode root) {
+    public boolean IsBalanced_Solution(TreeNode4 root) {
         if(root==null){
             return true;
         }
@@ -17,12 +17,22 @@ public class test38 {
         }
         return IsBalanced_Solution(root.rightNode) && IsBalanced_Solution(root.leftNode);
     }
-    public int getTreeDepth(TreeNode root){
+    public int getTreeDepth(TreeNode4 root){
          if (root==null){
              return  0;
          }
          int left=getTreeDepth(root.leftNode);
         int right=getTreeDepth(root.rightNode);
         return left>right ? left+1 : right+1;
+    }
+}
+
+class TreeNode4{
+    int val;
+    TreeNode4 leftNode;
+    TreeNode4 rightNode;
+    public TreeNode4(int val) {
+        this.val=val;
+
     }
 }
