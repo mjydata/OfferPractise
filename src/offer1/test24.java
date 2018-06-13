@@ -18,11 +18,11 @@ public class test24 {
 		}
 		list1.add(root.val);
 		target-=root.val;
-		if (target==0&&root.leftNode==null&&root.rightNode==null) {
+		if (target==0&&root.left==null&&root.right==null) {
 			list2.add(new ArrayList<>(list1));
 		}
-		FindPath(root.leftNode, target);
-		FindPath(root.rightNode, target);
+		FindPath(root.left, target);
+		FindPath(root.right, target);
 		list1.remove(list1.size()-1);
 		return list2;
 	}

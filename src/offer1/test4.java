@@ -1,13 +1,5 @@
 package offer1;
-class TreeNode{
-	int val;
-	TreeNode leftNode;
-	TreeNode rightNode;
-	public TreeNode(int val) {
-		this.val=val;
-		
-	}
-}
+
 public class test4 {
     public static TreeNode reConstructBinaryTree(int[] pre,int[] in){
     	TreeNode root=reConstructBinaryTree(pre,0,pre.length,in,0,in.length);
@@ -22,8 +14,8 @@ public class test4 {
 		for(int i=startIn;i<endIn;i++){
 	    		if(in[i]==pre[startPre]){
 	              		//??	
-	              		root.leftNode=reConstructBinaryTree(pre,startPre+1,startPre+i-1,in,startIn,i-1);
-	              		root.rightNode=reConstructBinaryTree(pre,startPre+i+1,endPre,in,i+1,endIn);
+	              		root.left=reConstructBinaryTree(pre,startPre+1,startPre+i-1,in,startIn,i-1);
+	              		root.right=reConstructBinaryTree(pre,startPre+i+1,endPre,in,i+1,endIn);
 	    		}
 	    	}
 	    	return root;
