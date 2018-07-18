@@ -43,10 +43,10 @@ public class FindTree {
 	   if (root==null) {
 		return;
 	}
-	   
-	   preFind(root.left);
+
+	   midFind(root.left);
 	   System.out.println(root.val);
-	   preFind(root.right);
+	   midFind(root.right);
    }
    /**
   	 * 后序遍历 递归
@@ -92,7 +92,7 @@ public class FindTree {
       * @param root 树的根节点 
       * 利用栈模拟递归过程实现循环先序遍历二叉树 
       * 这种方式具备扩展性，它模拟递归的过程，将左子树点不断的压入栈，直到null，然后处理栈顶节点的右子树 
-      */  
+      */
      public void preOrder_2(TreeNode root){
          if(root==null)return;  
     	 Stack<TreeNode> stack=new Stack<>();
