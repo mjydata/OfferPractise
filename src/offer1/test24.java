@@ -11,7 +11,25 @@ import java.util.ArrayList;
 public class test24 {
 	ArrayList<Integer> list1=new ArrayList<>();
 	ArrayList<ArrayList<Integer>> list2=new ArrayList<>();
-	
+	public ArrayList<ArrayList<Integer>> FindPath2(TreeNode root,int target) {
+	return  null;
+
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	public ArrayList<ArrayList<Integer>> FindPath(TreeNode root,int target) {
 		if(root== null){
 			return null;

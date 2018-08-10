@@ -14,6 +14,7 @@ import java.util.Stack;
  *
  */
 public class test21 {
+
    public boolean IsPopOrder(int [] pushA,int [] popA) {
 	  Stack<Integer> stack=new Stack<>();
 	  if(pushA.length==0||popA.length==0)
@@ -30,4 +31,5 @@ public class test21 {
 	}
 	  return stack.isEmpty();
    }
+
 }

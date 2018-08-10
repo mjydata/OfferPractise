@@ -7,7 +7,7 @@ package offer1;
  */
 
 public class test23Important {
-    	public boolean VerifySquenceOfBST(int[] sequ){
+	    public boolean VerifySquenceOfBST(int[] sequ){
     		if(sequ.length==0) 
     			return false;
     		return isRight(sequ, 0, sequ.length-1);
