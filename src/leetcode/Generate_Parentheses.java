@@ -41,4 +41,23 @@ public class Generate_Parentheses {
             generateParentheses(left,right-1,curStr+")",list);
         }
     }
+    public List<String> genratePar(int n){
+        List<String> lists=new ArrayList<>();
+        generate(n,n,"",lists);
+        System.out.print(lists);
+        return lists;
+    }
+    public void generate(int l,int r,String curStr,List<String> lists){
+        if (l==0 && r==0) {lists.add(curStr) ;
+            return;}
+        if (l>0){
+            generate(l-1,r,curStr+"(",lists);
+        }
+        if (r>0 && l<r){
+            generate(l,r-1,curStr+")",lists);
+        }
+    }
+    public static void main(String[] args){
+        new Generate_Parentheses().genratePar(2);
+    }
 }

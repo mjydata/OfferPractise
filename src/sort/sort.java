@@ -1,14 +1,13 @@
 package sort;
 
 public class sort {
-	public static void main(String[] args){
-        int[] arr={4,5,1,6,2,7,3,8};
-        quickSort(arr,0,arr.length-1);
-        for(int i=0;i<arr.length;i++){
-            System.out.print(arr[i]+" ");
-        }
-
-    }
+//	public static void main(String[] args){
+//        int[] arr={4,5,1,6,2,7,3,8};
+//        quickSort(arr,0,arr.length-1);
+//        for(int i=0;i<arr.length;i++){
+//            System.out.print(arr[i]+" ");
+//        }
+//    }
 	/*
 	 * 直接插入排序:	先将序列的第1个记录看成是一个有序的子序列，然后从第2个记录逐个进行插入，直至整个序列有序为止。
 	 * O(n^2)） 
@@ -68,18 +67,14 @@ public class sort {
 	public static void quickSort(int[] arr,int low ,int high){
 		if (low <high ){
 			int middle = getMiddle(arr,low,high);
-			if(middle-1>4){
-				quickSort(arr,0,middle-1);
-				quickSort(arr,middle+1,high);
-			}
-
+			quickSort(arr,0,middle-1);
+			quickSort(arr,middle+1,high);
 		}
-		
 	}
+
 	public static int getMiddle(int[] arr , int low ,int high){
 		int key=arr[low];//基准元素，排序中会空出来一个位置  
 		while (low<high){
-
 			while (low<high && arr[high]>=key ) {
 			--high;
 			}
@@ -90,18 +85,14 @@ public class sort {
 			}
 			arr[high]=arr[low];
 		}
-		arr[low]=key;
-
+		     arr[low]=key;
 			return low;
-
-
 	}
 	//二分查找（有序数组）O(logn)
 	public static int GetNumberOfK(int [] array , int k) {
 		return  find(array,k,0,array.length-1);
 	}
 	public static int find(int[] array,int k,int low,int high){
-
 		while(low<=high){
 			int middle=(low+high)>>>1;
 			if(k<array[middle]){
@@ -114,4 +105,6 @@ public class sort {
 		}
 		return -1;
 	}
+
 }
+

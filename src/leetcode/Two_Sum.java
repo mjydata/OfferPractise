@@ -27,7 +27,6 @@ public class Two_Sum {
                 }else{
                     map.put(nums[i],i);
                 }
-
             }
             return result;
         }

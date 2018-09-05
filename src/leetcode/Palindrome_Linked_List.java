@@ -42,6 +42,7 @@ public class Palindrome_Linked_List {
         }
         return previous;
     }
+
     class ListNode {
         int val;
       ListNode next;

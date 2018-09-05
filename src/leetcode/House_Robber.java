@@ -18,6 +18,7 @@ package leetcode;
  Explanation: Rob house 1 (money = 2), rob house 3 (money = 9) and rob house 5 (money = 1).
  Total amount you can rob = 2 + 9 + 1 = 12.
  */
+
 public class House_Robber {
     public int rob(int[] nums) {
         if(nums.length==0) return 0;

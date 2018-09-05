@@ -18,7 +18,7 @@ public class preTree {
 		if(root==null){return;
 		}
 		Stack<TreeNode> stack=new Stack<>();
-	
+
 		while (root!=null||stack.isEmpty()){
 			while (root!=null) {
 				System.out.println(root.val);

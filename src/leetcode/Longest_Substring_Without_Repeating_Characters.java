@@ -16,7 +16,7 @@ import java.util.HashSet;
 
  */
 public class Longest_Substring_Without_Repeating_Characters {
-    class Solution {
+
         public int lengthOfLongestSubstring(String s) {
             int left=0;    int right=0; int res=0;
             HashSet set=new HashSet();
@@ -32,5 +32,5 @@ public class Longest_Substring_Without_Repeating_Characters {
             return res;
 
         }
-    }
+
 }

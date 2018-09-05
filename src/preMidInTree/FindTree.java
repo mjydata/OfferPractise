@@ -117,7 +117,7 @@ public class FindTree {
 			return;
 		}
     	 Stack<TreeNode>  stack =new Stack<>();
-    	 while (root!=null || stack.isEmpty()){
+    	 while (root!=null ||!stack.isEmpty()){
     		 while(root!=null){	
     			 stack.push(root);
     			 root=root.left;
@@ -175,6 +175,7 @@ public class FindTree {
 		}
 	}
 }
+
 class TreeNode{
 	int  val;
 	TreeNode left;
